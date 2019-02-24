@@ -42,7 +42,9 @@ def _parse_record(raw_record, is_training, code_len, set_len):
     
     uniques = tf.cast(
         tf.reshape(parsed['set/num_unique'], shape=[]),
-        dtype=tf.int16)
+        dtype=tf.int32)
+    
+    
     
     return code, classes, files, uniques 
 
